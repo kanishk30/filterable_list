@@ -8,6 +8,7 @@
   <title>My Contacts</title>
 </head>
 <body>
+  <script src="app.js" charset="utf-8"></script>
   <div class="container">
     <h1 class="center-align">
       My Contacts
@@ -17,75 +18,38 @@
       <li class="collection-header">
         <h5>A</h5>
       </li>
-      <li class="collection-item">
-        <a href="#">Abe</a>
-      </li>
-      <li class="collection-item">
-        <a href="#">Adam</a>
-      </li>
-      <li class="collection-item">
-        <a href="#">Alan</a>
-      </li>
-      <li class="collection-item">
-        <a href="#">Anna</a>
-      </li>
       <li class="collection-header">
-        <h5>B</h5>
-      </li>
-      <li class="collection-item">
-        <a href="#">Beth</a>
-      </li>
-      <li class="collection-item">
-        <a href="#">Bill</a>
-      </li>
-      <li class="collection-item">
-        <a href="#">Bob</a>
-      </li>
-      <li class="collection-item">
-        <a href="#">Brad</a>
-      </li>
-      <li class="collection-header">
-        <h5>C</h5>
-      </li>
-      <li class="collection-item">
-        <a href="#">Carrie</a>
-      </li>
-      <li class="collection-item">
-        <a href="#">Cathy</a>
-      </li>
-      <li class="collection-item">
-        <a href="#">Courtney</a>
-      </li>
+	  			<h5>A</h5>
+	  		</li>
+	  		<li class="collection-item">
+	  			<a href="#">Anna</a>
+  			</li>
+  			<li class="collection-item">
+	  			<a href="#">Aakash</a>
+  			</li>
+  			<li class="collection-item">
+	  			<a href="#">Akarsh</a>
+  			</li>
+  			<li class="collection-header">
+	  			<h5>B</h5>
+	  		</li>
+	  		<li class="collection-item">
+	  			<a href="#">Birbal</a>
+  			</li>
+  			<li class="collection-item">
+	  			<a href="#">Bob</a>
+  			</li>
+  			<li class="collection-item">
+	  			<a href="#">Birjesh</a>
+  			</li>
+  			<li class="collection-header">
+	  			<h5>C</h5>
+	  		</li>
+	  		<li class="collection-item">
+	  			<a href="#">Chandan</a>
+  			</li>
     </ul>
   </div>
 
-  <script>
-    // Get input element
-    let filterInput = document.getElementById('filterInput');
-    // Add event listener
-    filterInput.addEventListener('keyup', filterNames);
-
-    function filterNames(){
-      // Get value of input
-      let filterValue = document.getElementById('filterInput').value.toUpperCase();
-
-      // Get names ul
-      let ul = document.getElementById('names');
-      // Get lis from ul
-      let li = ul.querySelectorAll('li.collection-item');
-
-      // Loop through collection-item lis
-      for(let i = 0;i < li.length;i++){
-        let a = li[i].getElementsByTagName('a')[0];
-        // If matches
-        if(a.innerHTML.toUpperCase().indexOf(filterValue) > -1){
-          li[i].style.display = '';
-        } else {
-          li[i].style.display = 'none';
-        }
-      }
-
-    }
-  </script>
 </body>
 </html>
